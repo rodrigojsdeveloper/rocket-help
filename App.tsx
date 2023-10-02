@@ -1,10 +1,13 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image } from "react-native";
+import { StatusBar } from "expo-status-bar";
+import { Input } from "./src/components/Input";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+      <Image source={require("./assets/Logo.png")} />
+      <Input placeholder="Email" />
+      <Input placeholder="Senha" />
       <StatusBar style="auto" />
     </View>
   );
@@ -13,8 +16,10 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#202024",
+    color: "#FFFFFF",
+    alignItems: "center",
+    justifyContent: "center",
+    paddingHorizontal: 30,
   },
 });
